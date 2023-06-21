@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-Z0N3W5P9ZF`}
+        />
+
+        <Script id="ga-script" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z0N3W5P9ZF', {
+              page_path: window.location.pathname,
+            });
+                `}
+        </Script>
+      </head>
       <body className={inter.className}>
         <div className='max-w-3xl mx-auto py-10'>
           <Link href='/' className="text-lg font-bold bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">Pranathi</Link>
