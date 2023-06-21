@@ -8,7 +8,7 @@ export default async function Home() {
         <div 
         // className="max-w-xl mx-auto"
         >
-            <h1 className="text-7xl font-extrabold">Hey I'm
+            <h1 className="text-7xl font-extrabold">Hey I&apos;m
                 <span className='bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent'> Pranathi</span>
             </h1>
             <p className='mt-3 text-xl text-gray-600'>Aloha Everyone!</p>
